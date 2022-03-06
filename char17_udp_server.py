@@ -12,7 +12,7 @@ def main():
 
     # to establish a connection, server uses two socket methods, that was imported from socket
     # 'socket.socket' creates a socket
-    # 'bind' binds to it (hearing any data that comes to that IP address)
+    # 'bind' binds to it (listening any data that comes to that IP address)
     # AF_INET parameter means that we create an internet-socket(IP)
     # SOCK_DGRAM means that we will use send and get datagrams (use UDP protocol)
     server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
