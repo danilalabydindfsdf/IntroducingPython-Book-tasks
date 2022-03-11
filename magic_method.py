@@ -5,8 +5,14 @@ class Word():
     def __eq__(self, other):
         return self.text.lower() == other.text.lower()
 
+    def __ne__(self, other):
+        return self.text.lower() != other.text.lower()
+
     def __str__(self):
         return self.text
+
+    def __repr__(self):
+        return repr(self.text)
 
 
 def main():
@@ -16,7 +22,10 @@ def main():
 
     print(first == second)
     print(second == third)
-    print(first)
+    print(first.text)
+    print(second != third)
+    print(third) # use __str__
+
 
 
 if __name__ == '__main__':
