@@ -1,5 +1,5 @@
 import time
-from datetime import date
+from datetime import date, datetime, timedelta
 from datetime import time as tm
 
 
@@ -36,6 +36,24 @@ def main():
         print(time.strptime("2019 01 21"))
     except ValueError as err:
         print(err)
+
+    now = date.today()
+    now_str = now.isoformat()
+    # with open('time.txt', 'wt') as file:
+    #     print(now_str, file=file)
+
+    with open('time.txt', 'r') as file:
+        today_string = file.read()
+        print(today_string)
+        print(type(today_string))
+        fmt = "%Y-%m-%d\n"
+        print(time.strptime(today_string, fmt))
+
+    day = date(2000, 4, 12)
+    print(day)
+    print(day.weekday())
+    years = timedelta(days=10000)
+    print(day + years)
 
 
 if __name__ == '__main__':
