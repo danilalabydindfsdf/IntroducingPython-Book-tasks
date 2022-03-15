@@ -68,6 +68,14 @@ def main():
     place4 = place_bytes.decode('windows-1252')
     print(place4)
 
+    mystery = '\U0001f4a9'
+    print(mystery)
+    print(unicodedata.name(mystery))
+    pop_bytes = bytes(mystery.encode('utf-8'))
+    print(pop_bytes)
+    pop_string = pop_bytes.decode('utf-8')
+    print(pop_string)
+
 
 if __name__ == '__main__':
     main()
